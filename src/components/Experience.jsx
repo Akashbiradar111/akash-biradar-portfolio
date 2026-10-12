@@ -1,17 +1,8 @@
 function Experience() {
   const experiences = [
+
     {
       number: "01",
-      role: "MERN Stack Developer",
-      company: "TheStackly",
-      period: "JUN 2026 — PRESENT",
-      description:
-        "Working as a frontend developer on an AI-powered healthcare and telemedicine ecosystem, building web applications with React.js. Also contributing to the mobile application using React Native and TypeScript.",
-      technologies:
-        "React.js · React Native · TypeScript · MERN · Healthcare AI",
-    },
-    {
-      number: "02",
       role: "Software Engineer",
       company: "Mindsnxt",
       period: "FEB 2025 — MAR 2026",
@@ -21,9 +12,10 @@ function Experience() {
         "Python · Selenium · TensorFlow · ML · DL · Node.js · Klaviyo · GA4",
     },
     {
-      number: "03",
+      number: "02",
       role: "Founder & Full-Stack Developer",
       company: "Serviqe",
+      url: "https://serviqe.com/",
       period: "2026",
       description:
         "Built and launched Serviqe, an independent product connecting people with trusted local professionals such as electricians, labourers, beauticians and other service providers. Designed and developed the product from the ground up, including architecture, UI/UX, development and deployment.",
@@ -73,9 +65,20 @@ function Experience() {
                 <div>
                   <h3>{experience.role}</h3>
 
-                  <span className="experience-company">
-                    {experience.company}
-                  </span>
+<span className="experience-company">
+  {experience.url ? (
+    <a
+      href={experience.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="experience-company-link"
+    >
+      {experience.company}
+    </a>
+  ) : (
+    experience.company
+  )}
+</span>
                 </div>
 
                 <span className="experience-period">

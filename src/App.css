@@ -1036,10 +1036,29 @@
   letter-spacing: -0.5px;
 }
 
+
 .experience-company {
   color: var(--secondary);
   font-size: 15px;
 }
+
+.experience-company-link {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.experience-company-link:hover {
+  opacity: 0.65;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.experience-company-link:focus-visible {
+  outline: 1px solid var(--secondary);
+  outline-offset: 4px;
+}
+
 
 .experience-period {
   color: var(--secondary);
